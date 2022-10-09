@@ -22,7 +22,6 @@ def current_best_learning(examples, h, examples_so_far=None):
         examples_so_far = []
     if not examples:
         return h
-
     e = examples[0]
     if is_consistent(e, h):
         return current_best_learning(examples[1:], h, examples_so_far + [e])
